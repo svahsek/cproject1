@@ -1,19 +1,27 @@
-// https://www.youtube.com/watch?v=8jo3Dy5CA2Y&t=718s
 #include <stdio.h>
+#include "programs.h"
 
 int main() {
-// declare variables to store two numbers
-int num1 = 5;
-int num2 = 10;
-int num3 = 15;
-
-// calculate the sum of two numbers
-int sum = num1 + num2;
-
-// Display the result 
-printf("the sum of %d and %d is: %d\n", num1, num2, sum);
-
-//return 0 to indicate successful execution of the program
-return 0;
-
+    int choice;
+    do {
+        printf("\n--- Menu ---\n");
+        printf("1. Calculator\n");
+        printf("2. Salary Calculator\n");
+        printf("3. Sum of Two Numbers\n");
+        printf("4. Temperature Converter\n");
+        printf("5. Hello Message\n");
+        printf("0. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+        switch (choice) {
+            case 1: calculator(); break;
+            case 2: salary(); break;
+            case 3: sum_two_numbers(); break;
+            case 4: temperature(); break;
+            case 5: hello_message(); break;
+            case 0: printf("Exiting...\n"); break;
+            default: printf("Invalid choice!\n");
+        }
+    } while (choice != 0);
+    return 0;
 }

@@ -1,18 +1,9 @@
 #include <stdio.h>
+#include "programs.h"
 
-int main() {
-// declare variables to store two numbers
-
-int num1 = 5;
-int num2 = 10;
-
-// calculate the sum of two numbers
-int sum = num1 + num2;
-
-// Display the result 
-printf("the sum of %d and %d is: %d\n", num1, num2, sum);
-
-//return 0 to indicate successful execution of the program
-return 0;
-
+void sum_two_numbers() {
+    int num1 = 5, num2 = 10;
+    int sum = num1 + num2;
+    printf("\nSum of two numbers\n");
+    printf("The sum of %d and %d is: %d\n", num1, num2, sum);
 }
